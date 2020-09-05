@@ -15,10 +15,11 @@
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
+        "laravel/tinker": "^2.0",
         "laravel/sanctum": "^2.6",
         "laravel/socialite": "^4.4",
         "laravel/telescope": "^3.5",
-        "laravel/tinker": "^2.0",
+        "laravel/ui": "^2.2",
         "maatwebsite/excel": "^3.1",
         "pusher/pusher-php-server": "~3.0",
         "spatie/laravel-permission": "^3.16"

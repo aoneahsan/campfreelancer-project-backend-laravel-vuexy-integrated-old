@@ -1,9 +1,15 @@
 // axios
 import axios from 'axios'
 
-const baseURL = ''
+const baseURL = env('AXIOS_ROOT_URL');
 
-export default axios.create({
-  baseURL
-  // You can add your headers here
-})
+console.log("baseURL = ",baseURL);
+
+axios.create({
+    baseURL
+    // You can add your headers here
+});
+
+axios.defaults.withCredentials = true;
+
+export default axios

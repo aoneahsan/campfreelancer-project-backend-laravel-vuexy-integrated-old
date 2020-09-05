@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 // A uth: :r outes(['verify' => true]);
 
-Route::redirect('/', '/admin');
 Route::get('/verify', 'Auth\AuthyVerifyController@index')->name('verify');
 Route::post('/verify', 'Auth\AuthyVerifyController@verify')->name('verify');
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
@@ -35,8 +34,12 @@ Route::post('resend-verify-code', 'Auth\AuthyVerifyController@resendCode')->midd
 Route::get('user/analytics-report', 'Api\User\ApiUserAnalyticsController@index');
 
 
-Route::get('/admin/{any?}', 'Admin\AdminController@index')->where('any', '.*');
+Route::get('/{any?}', 'Admin\AdminController@index')->where('any', '.*');
 
 // Au th: :r outes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
