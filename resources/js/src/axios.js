@@ -1,9 +1,7 @@
 // axios
 import axios from 'axios'
 
-const baseURL = env('AXIOS_ROOT_URL');
-
-console.log("baseURL = ",baseURL);
+const baseURL = "http://localhost:8000";
 
 axios.create({
     baseURL
